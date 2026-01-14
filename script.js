@@ -1,4 +1,4 @@
-// Exemple de formulaire simple
+// Exemple de formulaire Gestion des utilisateurs
 // const form = document.getElementById("form");
 // const table = document.getElementById("table-container");
 
@@ -46,19 +46,59 @@
 
 
 // Exemple de Sondage
-const surveyForm = document.getElementById("surveyForm");
-const result = document.getElementById("surveyResult");
+// const surveyForm = document.getElementById("surveyForm");
+// const result = document.getElementById("surveyResult");
 
-surveyForm.addEventListener("submit", function (e) {
+// surveyForm.addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   const selected = document.querySelector('input[name="language"]:checked');
+
+//   if (!selected) {
+//     result.textContent = "Veuillez choisir une option";
+//     result.style.color = "red";
+//   }
+
+//   result.textContent = "Vous avez voté pour : " + selected.value;
+//   result.style.color = "green";
+// });
+
+// TODO List
+// const input = document.getElementById("taskInput");
+// const list = document.getElementById("taskList");
+
+// document.getElementById("addTask").addEventListener("click", function () {
+//   const task = input.value;
+
+//   if (task === "") {
+//     alert("Entrez une tâche");
+//     return;
+//   }
+
+//   const li = document.createElement("li");
+//   li.innerHTML = `
+//     ${task}
+//     <button onclick="this.parentElement.remove()">X</button>
+//   `;
+
+//   list.appendChild(li);
+//   input.value = "";
+// });
+
+// Formulaire de login
+document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const selected = document.querySelector('input[name="language"]:checked');
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+  const msg = document.getElementById("message");
 
-  if (!selected) {
-    result.textContent = "Veuillez choisir une option";
-    result.style.color = "red";
+  if (user === "" || pass === "") {
+    msg.textContent = "Champs obligatoires";
+    msg.style.color = "red";
+    return;
   }
 
-  result.textContent = "Vous avez voté pour : " + selected.value;
-  result.style.color = "green";
+  msg.textContent = "Connexion réussie (simulation)";
+  msg.style.color = "green";
 });
