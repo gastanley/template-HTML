@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">SETEX</div>
+            <ul class="navbar-links">
+                <li class="items"><a href="#">Accueil</a></li>
+                <li class="items"><a href="#">About</a></li>
+                <li class="items"><a href="#">Contact</a></li>
+
+            </ul>
+        </nav class="navbar">
+        <form id="form-container">
+            <input id="name" type="text" name="Nom" placeholder="Entrer votre nom" required>
+            <input id="email" type="text" name="Email" placeholder="Entrer votre email" required>
+            <button id="submit-btn" type="submit">Ajouter</button>
+        </form>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>Nom</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody id="table-container">
+            </tbody>
+        </table>
+        <script src="script.js"></script>    
+    </body>
+</html>

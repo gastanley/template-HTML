@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.navbar-container{
+
+}
+
+.navbar-container li{
+    text-decoration: none;
+}
